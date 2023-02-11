@@ -1,0 +1,520 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+html,body,div,section,h1,h2,h3,figure,figcaption,p,span,ul,li,strong{
+    margin: 0px;
+    padding: 0px;
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+body{
+    font-family: 'Jua', sans-serif;
+}
+
+#welcome{
+    width: 100%;
+    height: 200vh;
+    background: #f2fecc;
+    position: relative;
+    z-index: 2;
+}
+@keyframes food{
+    0%{
+        rotate: 45deg;
+    }
+    100%{
+        rotate: -45deg;
+    }
+}
+.food_box{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+.food{
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.fd1{ width: 80%;}
+.fd2{ width: 100%;}
+.fd3{ width: 80%;}
+.fd4{ width: 100%;}
+.food span{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: food .8s ease-in-out infinite alternate;
+}
+.food .p{
+    background-image: url("../img/p.png");
+}
+.food .t{
+    background-image: url("../img/t.png");
+}
+.food .m{
+    background-image: url("../img/m.png");
+}
+#welcome .hi{
+    width: 50%;
+    height: 70vh;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    background: url("../img/welcome.png") no-repeat top;
+    background-size: contain;
+}
+#welcome h2{
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 50px;
+    /* color: #7bbd1d; */
+    color: #4d8001;
+    display: none;
+}
+#profile_page{
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    z-index: 3;
+}
+#profile_page .open{
+    width: 100%;
+    height: 100vh;
+    /* background: #f2fecc; */
+    background: url("../img/profileBg.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+#profile_page .opendoor{
+    width: 100%;
+    height: 5vh;
+    background: #000;
+}
+#profile_page .door_up{
+    width: 100%;
+    height: 5vh;
+    background: #ededed;
+}
+#profile_page .door_box{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    transform: translateX(-50%) scale(1);
+    left: 50%;
+    bottom: 0px;
+    background: url("../img/door.png") no-repeat center;
+    background-size: contain;
+    transition: all .3s;
+    transition-timing-function: ease-in-out;
+}
+#profile_page .door{
+    width: 80%;
+    height: 370px;
+    position: absolute;
+    transform: translateX(-50%) scale(1);
+    left: 50%;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+#profile_page .door>div{
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+#profile_page .door_l{
+    background-image: url("../img/door1.png");
+    transform-origin: left;
+}
+#profile_page .door_r{
+    background-image: url("../img/door2.png");
+    transform-origin: right;
+}
+#profile_page .door_l.open_l{transform: rotateY(-140deg);}
+#profile_page .door_r.open_r{transform: rotateY(140deg);}
+#profile_page .profile_box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* display: none; */
+}
+#profile_page .profile{
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    background: url("../img/profile.jpeg")no-repeat;
+}
+#profile_page .profile_img{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: end;
+    align-content: center;
+    /* background: #555; */
+}
+#profile_page figcaption{
+    width: 90%;
+    height: 75%;
+    background: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+#profile_page .img_box{
+    width: 100%;
+    height: 50%;
+}
+#profile_page .img_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#profile_page .text_box{
+    width: 100%;
+    height: 40%;
+}
+#profile_page .text_box span{
+    display: block;
+    float: left;
+    width: 20%;
+    display: in;
+    font-weight: bold;
+}
+#profile_page .text_box p{ margin-bottom: 20px;}
+#profile_page .text_box p:last-child{margin-bottom: 0px;}
+#profile_page .profile_text{
+    width: 67%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+#skill{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+}
+#skill .pot_content{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/skillBg.jpg") no-repeat center;
+    background-size: cover;
+}
+#skill .skill_box{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+}
+#skill .skill_box>div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#skill .skill_list{
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+#skill .skill_list>li{
+    margin: 0 auto;
+    height: 28%;
+    display: flex;
+    transition: all .5s;
+    transition-timing-function: ease-in-out;
+}
+#skill .skill_list>li:first-child:hover{
+    opacity: 0;
+}
+#skill .skill_list>li:first-child{
+    width: 60%;
+    justify-content: space-around;
+}
+#skill .skill_list>li:nth-child(2){
+    width: 90%;
+    justify-content: space-around;
+}
+#skill .skill_list>li:last-child{
+    width: 100%;
+    justify-content: space-between;
+}
+#skill .pot_box{
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0px;
+}
+#skill .pot_box .pot{
+    width: 100%;
+    height: 70%;
+    background: url("../img/pot2.png") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 10%;
+}
+#skill .pot_box .fire{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+    background: url("../img/fire.gif") no-repeat center;
+    background-size: contain;
+}
+#portfolio{
+    width: 100%;
+    height: 400vw;
+    background: url("../img/portfolioBg.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#portfolio>h2{
+    font-size: 50px;
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    box-sizing: border-box;
+    color: #fff;
+}
+#portfolio .portfolio_box{
+    width: 400vw;
+    height: 100%;
+    display: flex;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: all .3s ease-out;
+}
+#portfolio .portfolio_list{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#portfolio .projcet_box{
+    width: 80%;
+    height: 90vh;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    border-radius: 50%;
+}
+#portfolio .projcet_box>div{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border: 7px #808080 solid;
+}
+#portfolio .projcet_box>div>div{
+    width: 94%;
+    height: 90%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border: 14px #808080 solid;
+}
+#portfolio .projcet_list{
+    width: 100%;
+    height: 100%;
+}
+#portfolio .projcet_list>li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+#portfolio li>div{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+#portfolio .qr_box{
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 1%;
+}
+#portfolio .qr_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#portfolio .project_img>img{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    object-fit: contain;
+}
+#portfolio .txt_box{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    text-align: center;
+}
+#portfolio .txt_box>h2{
+    font-size: 40px;
+}
+#portfolio .txt_box>h3{
+    font-size: 30px;
+    margin: 5% 0;
+}
+#portfolio .txt_box strong{
+    font-size: 25px;
+    display: block;
+    margin: 3% 0px;
+}
+#portfolio .txt_box .no{ margin-top: 0;}
+#portfolio .txt_box ul{
+    width: 80%;
+    height: 15%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+#portfolio .txt_box li{
+    width: 25%;
+    height: 100%;
+}
+#portfolio .txt_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#portfolio .go{
+    width: 40%;
+    height: 10%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+#portfolio .go>a{
+    display: block;
+    width: 40%;
+    height: 100%;
+    padding-top: 5%;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 15px;
+    color: #fff;
+}
+#portfolio .viex{
+    background: #808080;
+}
+#portfolio .github{
+    background: #8b00ff;
+}
+#portfolio span{
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 700px;
+}
+#portfolio .fork{
+    background: url("../img/fork.png") no-repeat center;
+    background-size: contain;
+    transform: rotate(45deg);
+    left: -150px;
+    top: 500px;
+}
+#portfolio .fork_s{
+    background: url("../img/fork_s.png") no-repeat center;
+    background-size: contain;
+    transform: rotate(45deg);
+    left: 20px;
+    bottom: -400px;
+}
+#portfolio .knife{
+    background: url("../img/knife.png") no-repeat center;
+    background-size: contain;
+    transform: rotate(-45deg);
+    right: 20px;
+    bottom: -300px;
+    width: 200px;
+    height: 500px;
+}
+#portfolio .spoon{
+    background: url("../img/spoon.png") no-repeat center;
+    background-size: contain;
+    transform: rotate(-45deg);
+    right: -100px;
+    bottom: -200px;
+    width: 200px;
+    height: 500px;
+}
+#contact{
+    width: 100%;
+    height: 100vh;
+    background: #f2fecc;
+    position: relative;
+    z-index: 2;
+}
+#contact .food_box2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+#contact .contact_box{
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background: url("../img/end.png") no-repeat;
+    background-size: contain;
+}
