@@ -5,7 +5,6 @@ const textArray=textSource.split('');
 const ptf=document.getElementById('portfolio');
 const ptfB=document.querySelector('.portfolio_box');
 
-
 let index=0;
 
 const typing=()=>{
@@ -64,27 +63,39 @@ const sction2=()=>{
 const sction3=()=>{
     const skill=document.getElementById('skill');
     let skillY=skill.getBoundingClientRect().top;
-    if(skillY>0){
-        ptfB.style.position='relative';
-    }
     if(skillY<0){
         ptf.style.zIndex=2;
     }
 }
 
 const sction4=()=>{
-    const ptfTo=document.getElementById('portfolio').offsetTop;
-    const ptfT=ptf.getBoundingClientRect().top;
+    const ptfTo=ptf.offsetTop;
+    const ptfH2=document.querySelector('.ptf_h2');
+    const fk=document.querySelector('.fork');
+    const fks=document.querySelector('.fork_s');
+    const kn=document.querySelector('.knife');
+    const sp=document.querySelector('.spoon');
     let scrollTop=window.pageYOffset;
     let offset=scrollTop - ptfTo;
     // console.log(lastL);
     // console.log(scrollTop,offset);
-    if(ptfT>0){
-        ptfB.style.position='relative';
-    }
     if(scrollTop>=ptfTo){
+        ptfH2.style.position='fixed';
         ptfB.style.position='fixed';
+        fk.style.position='fixed';
+        fks.style.position='fixed';
+        kn.style.position='fixed';
+        sp.style.position='fixed';
         ptfB.style.left=`-${offset}px`;
+
+    }else{
+        ptfH2.style.position='absolute';
+        ptfB.style.position='relative';
+        fk.style.position='absolute';
+        fks.style.position='absolute';
+        kn.style.position='absolute';
+        sp.style.position='absolute';
+        ptfB.style.left=0+'px';
     }
 }
 
