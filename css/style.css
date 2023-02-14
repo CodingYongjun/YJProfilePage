@@ -90,60 +90,75 @@ body{
     height: 200vh;
     position: relative;
     z-index: 3;
+    overflow: hidden;
 }
 #profile_page .open{
-    width: 100%;
+    width: 1920px;
     height: 100vh;
+    margin-left: -960px;
     /* background: #f2fecc; */
-    background: url("../img/profileBg.png") no-repeat center;
-    background-size: cover;
-    position: relative;
+    background:url("../img/profileBg.png") no-repeat center;
+    background-size:co;
+    position: absolute;
+	left:50%;
+	top:0;
+	z-index:50;
+	transition:all 1s;
+	transition-timing-function:cubic-bezier(.41,.06,.49,.9);
+}
+#profile_page .open.fix{
+	position:fixed;
+}
+#profile_page .open.fix.scale{
+	transform:scale(5.2);
 }
 #profile_page .opendoor{
     width: 100%;
     height: 5vh;
-    background: #000;
 }
 #profile_page .door_up{
     width: 100%;
     height: 5vh;
-    background: #ededed;
 }
 #profile_page .door_box{
-    width: 500px;
-    height: 500px;
+    width: 367px;
+    height: 559px;
     position: absolute;
     transform: translateX(-50%) scale(1);
     left: 50%;
-    bottom: 0px;
-    background: url("../img/door.png") no-repeat center;
-    background-size: contain;
+    bottom: 130px;
     transition: all .3s;
     transition-timing-function: ease-in-out;
 }
+@media screen and (max-height: 821px){
+    #profile_page .door_box{
+        bottom: 55px;
+    }
+}
+@media screen and (max-height: 723px){
+    #profile_page .door_box{
+        bottom: 10px;
+    }
+}
 #profile_page .door{
-    width: 80%;
-    height: 370px;
-    position: absolute;
-    transform: translateX(-50%) scale(1);
-    left: 50%;
-    bottom: 80px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 #profile_page .door>div{
-    width: 30%;
+    width: 50%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     transition: all .5s;
 }
 #profile_page .door_l{
-    background-image: url("../img/door1.png");
+    background-image: url("../img/door1.jpg");
     transform-origin: left;
 }
 #profile_page .door_r{
-    background-image: url("../img/door2.png");
+    background-image: url("../img/door2.jpg");
     transform-origin: right;
 }
 #profile_page .door_l.open_l{transform: rotateY(-140deg);}
@@ -152,35 +167,64 @@ body{
     width: 100%;
     height: 100vh;
     position: relative;
-    /* display: none; */
+}
+#profile_page .profile_box.fix{
+	position:fixed;
+	left:0;
+	top:0;
 }
 #profile_page .profile{
-    width: 80%;
+    width: 85%;
     height: 90%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background: #AF9690;
+    border-radius: 15px;
+}
+#profile_page .menu{
+    width: 95%;
+    height: 95%;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
     display: flex;
     justify-content: space-between;
-    background: url("../img/profile.jpeg")no-repeat;
+    background: #fff;
+    border-radius: 15px;
 }
 #profile_page .profile_img{
     width: 33%;
     height: 100%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: end;
+    justify-content: center;
     align-content: center;
-    /* background: #555; */
+    position: relative;
+}
+#profile_page .clip{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: translateY(-50%) rotate(270deg);
+    top: 50%;
+    left: -40%;
+    background: url("../img/awd.png") no-repeat;
+    background-size: contain;
 }
 #profile_page figcaption{
     width: 90%;
-    height: 75%;
+    height: 80%;
     background: #fff;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
+}
+#profile_page figcaption h2{
+    text-align: center;
+    font-size: 30px;
 }
 #profile_page .img_box{
     width: 100%;
@@ -194,15 +238,23 @@ body{
 #profile_page .text_box{
     width: 100%;
     height: 40%;
+    text-align: center;
+}
+#profile_page .text_box p{
+    width: 75%;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 #profile_page .text_box span{
     display: block;
-    float: left;
-    width: 20%;
-    display: in;
+    font-size: 13px;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    float: left;
 }
-#profile_page .text_box p{ margin-bottom: 20px;}
+#profile_page .text_box p:first-child{padding-top: 0px;}
 #profile_page .text_box p:last-child{margin-bottom: 0px;}
 #profile_page .profile_text{
     width: 67%;
@@ -395,7 +447,7 @@ body{
 #skill .pot_box .pot{
     width: 100%;
     height: 70%;
-    background: url("../img/pot2.png") no-repeat center;
+    background: url("../img/pot.png") no-repeat center;
     background-size: contain;
     position: absolute;
     z-index: 1;
@@ -491,7 +543,7 @@ body{
     left: 50%;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 5px 10px 10px 10px rgba(0,0,0,0.7);
+    box-shadow: 5px 10px 10px 10px rgba(0,0,0,0.5);
 }
 #portfolio .projcet_box>div{
     width: 95%;
@@ -502,6 +554,7 @@ body{
     top: 50%;
     left: 50%;
     border: 7px #808080 solid;
+    box-shadow: inset 5px 1px 15px 3px rgba(0, 0, 0, 0.25);
 }
 #portfolio .projcet_box>div>div{
     width: 94%;
@@ -512,6 +565,8 @@ body{
     top: 50%;
     left: 50%;
     border: 14px #808080 solid;
+    /* box-sizing: border-box; */
+    box-shadow: inset -20px 0px 15px 5px rgba(0, 0, 0, 0.25);
 }
 #portfolio .projcet_list{
     width: 100%;
@@ -669,7 +724,7 @@ body{
     height: 100vh;
     background: #f2fecc;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 }
 #contact .food_box2{
     width: 100%;
