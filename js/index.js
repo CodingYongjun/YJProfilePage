@@ -2,9 +2,6 @@ const outTyping=document.querySelector('.outTyping');
 const typingArea=document.querySelector('.typing');
 const textSource=outTyping.innerText;
 const textArray=textSource.split('');
-const ptf=document.getElementById('portfolio');
-const ptfB=document.querySelector('.portfolio_box');
-
 let index=0;
 
 const typing=()=>{
@@ -21,64 +18,71 @@ let typ=setInterval(typing,100);
 
 const sction1=()=>{
     const logo=document.querySelector('.hi');
-
     let logoY=logo.offsetHeight;
-    console.log(logoY);
-    console.log(window.pageYOffset>logoY)
-
     if(window.pageYOffset>logoY==true){
         typingArea.style.display='block';
     }else{
         typingArea.style.display='none';
     }
 }
+const sect2 = document.querySelector("#profile_page");
+const skill=document.getElementById('skill');
+const sect2height = sect2.getBoundingClientRect().height;
+const openDoor=document.querySelector('.opendoor');
+const doorL=document.querySelector('.door_l');
+const doorR=document.querySelector('.door_r');
+
+let inc=0.1;
+let zoom=1;
 
 const sction2=()=>{
-    const openDoor=document.querySelector('.opendoor');
+    const sect2top = sect2.getBoundingClientRect().top;
     let doorY=openDoor.getBoundingClientRect().bottom;
-    // console.log(doorY);
-    const doorL=document.querySelector('.door_l');
-    const doorR=document.querySelector('.door_r');
-
-    if(doorY<0){
-        doorL.classList.add('open_l')
-        doorR.classList.add('open_r')
-        typingArea.style.display='none';
+	
+	if( sect2top<0 ){
+		sect2.querySelector('.open').classList.add('fix');
+		sect2.querySelector('.profile_box').classList.add('fix');
+	}else{
+		sect2.querySelector('.open').classList.remove('fix');
+		sect2.querySelector('.profile_box').classList.remove('fix');
+	}
+	
+    if((sect2top+doorY)<0){
+        doorL.classList.add('open_l');
+        doorR.classList.add('open_r');
     }else{
         doorL.classList.remove('open_l');
         doorR.classList.remove('open_r');
-    }
+    }	
 
-    const doorUp=document.querySelector('.door_up');
-    let upY=doorUp.getBoundingClientRect().bottom;
-    const door=document.querySelector('.door_box');
-    let inc=0.1;
-    let zoom=1;
-    if(upY<0){
-        door.style.transform=`translateX(-50%) scale(${zoom+=inc})`
+	if((sect2top+sect2height/6)<0){
+		sect2.querySelector('.open').classList.add('scale');
     }else{
-        door.style.transform=`translateX(-50%) scale(${zoom-=inc})`
+		sect2.querySelector('.open').classList.remove('scale');
     }
 }
 const sction3=()=>{
-    const skill=document.getElementById('skill');
     let skillY=skill.getBoundingClientRect().top;
+    if(skillY>0){
+        ptfB.style.position='relative';
+    }
     if(skillY<0){
-        ptf.style.zIndex=2;
+        ptf.style.zIndex=4;
     }
 }
 
+const ptf=document.getElementById('portfolio');
+const ptfB=document.querySelector('.portfolio_box');
+const ptfH2=document.querySelector('.ptf_h2');
+const fk=document.querySelector('.fork');
+const fks=document.querySelector('.fork_s');
+const kn=document.querySelector('.knife');
+const sp=document.querySelector('.spoon');
+
 const sction4=()=>{
     const ptfTo=ptf.offsetTop;
-    const ptfH2=document.querySelector('.ptf_h2');
-    const fk=document.querySelector('.fork');
-    const fks=document.querySelector('.fork_s');
-    const kn=document.querySelector('.knife');
-    const sp=document.querySelector('.spoon');
     let scrollTop=window.pageYOffset;
     let offset=scrollTop - ptfTo;
-    // console.log(lastL);
-    // console.log(scrollTop,offset);
     if(scrollTop>=ptfTo){
         ptfH2.style.position='fixed';
         ptfB.style.position='fixed';
