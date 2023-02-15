@@ -96,7 +96,6 @@ body{
     width: 1920px;
     height: 100vh;
     margin-left: -960px;
-    /* background: #f2fecc; */
     background:url("../img/profileBg.png") no-repeat center;
     background-size:co;
     position: absolute;
@@ -167,6 +166,10 @@ body{
     width: 100%;
     height: 100vh;
     position: relative;
+    background: #000;
+}
+#profile_page .profile_box.bg{
+    background: url("../img/portfolioBg.jpg") no-repeat;
 }
 #profile_page .profile_box.fix{
 	position:fixed;
@@ -180,8 +183,11 @@ body{
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    background: #AF9690;
+    background: #deb887;
     border-radius: 15px;
+    opacity: 0;
+    transition: all .5s;
+    transition-timing-function: ease-in;
 }
 #profile_page .menu{
     width: 95%;
@@ -191,9 +197,11 @@ body{
     top: 50%;
     left: 50%;
     display: flex;
-    justify-content: space-between;
     background: #fff;
     border-radius: 15px;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    gap: 30px;
 }
 #profile_page .profile_img{
     width: 33%;
@@ -203,6 +211,7 @@ body{
     justify-content: center;
     align-content: center;
     position: relative;
+    text-align: center;
 }
 #profile_page .clip{
     width: 200px;
@@ -210,59 +219,103 @@ body{
     position: absolute;
     transform: translateY(-50%) rotate(270deg);
     top: 50%;
-    left: -40%;
-    background: url("../img/awd.png") no-repeat;
+    left: -200px;
+    background: url("../img/awd.png") no-repeat bottom;
     background-size: contain;
+}
+#profile_page .bar{
+    height: 80%;
+    position: absolute;
+    right: -1%;
+    border-right: 2px #ccc solid;
 }
 #profile_page figcaption{
     width: 90%;
-    height: 80%;
+    height: 90%;
     background: #fff;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
 }
+#profile_page .menu>h2{
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
 #profile_page figcaption h2{
     text-align: center;
+    color: #555;
     font-size: 30px;
 }
 #profile_page .img_box{
     width: 100%;
-    height: 50%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 #profile_page .img_box img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
-#profile_page .text_box{
+#profile_page .img_text{
     width: 100%;
-    height: 40%;
+    height: 25%;
     text-align: center;
 }
-#profile_page .text_box p{
+#profile_page .img_text p{
     width: 75%;
-    margin: 0 auto;
     font-size: 16px;
     margin-bottom: 10px;
+    text-align: left;
 }
-#profile_page .text_box span{
+#profile_page .img_text span{
     display: block;
-    font-size: 13px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10px;
+    margin:0px 10px 10px 0px;
     float: left;
+    color: #555;
 }
-#profile_page .text_box p:first-child{padding-top: 0px;}
-#profile_page .text_box p:last-child{margin-bottom: 0px;}
+#profile_page .img_text p:last-child span{
+    font-size: 20px;
+    float: none;
+    margin-right: 0px;
+}
+#profile_page .img_text p:last-child{
+    margin: 0 auto;
+    text-align: center;
+}
 #profile_page .profile_text{
     width: 67%;
     height: 100%;
-    background: #000;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    justify-content: center;
+}
+#profile_page .profile_text .text_box{
+    width: 100%;
+    height: 90%;
+}
+#profile_page .profile_text .text_box>h2{
+    text-align: center;
+    font-size: 30px;
+    color: #555;
+}
+#profile_page .profile_text .text_box>h3{
+    font-size: 30px;
+    margin: 35px 0;
+    color: #808080;
+}
+#profile_page .profile_text .text_box>p{
+    word-break: keep-all;
+    white-space: initial;
+    line-height: 30px;
 }
 #skill{
     width: 100%;
