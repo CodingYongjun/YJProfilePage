@@ -14,7 +14,7 @@ const typing=()=>{
         }
     }
 }
-let typ=setInterval(typing,100);
+let typ=setInterval(typing,80);
 
 const sction1=()=>{
     const logo=document.querySelector('.hi');
@@ -26,6 +26,7 @@ const sction1=()=>{
     }
 }
 const sect2 = document.querySelector("#profile_page");
+const ss=document.querySelector('.profile');
 const skill=document.getElementById('skill');
 const sect2height = sect2.getBoundingClientRect().height;
 const openDoor=document.querySelector('.opendoor');
@@ -56,9 +57,13 @@ const sction2=()=>{
     }	
 
 	if((sect2top+sect2height/6)<0){
+        sect2.querySelector('.profile_box').classList.add('bg');
 		sect2.querySelector('.open').classList.add('scale');
+        ss.style.opacity=1;
     }else{
+        sect2.querySelector('.profile_box').classList.remove('bg');
 		sect2.querySelector('.open').classList.remove('scale');
+        ss.style.opacity=0;
     }
 }
 const sction3=()=>{
