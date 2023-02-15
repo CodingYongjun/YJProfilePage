@@ -220,7 +220,7 @@ body{
     transform: translateY(-50%) rotate(270deg);
     top: 50%;
     left: -200px;
-    background: url("../img/awd.png") no-repeat bottom;
+    background: url("../img/clip.png") no-repeat bottom;
     background-size: contain;
 }
 #profile_page .bar{
