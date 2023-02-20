@@ -84,6 +84,53 @@ const fks=document.querySelector('.fork_s');
 const kn=document.querySelector('.knife');
 const sp=document.querySelector('.spoon');
 
+const sooOhplay=document.querySelector('.vbgs');
+const tocoplay=document.querySelector('.vbgt')
+const sooOhBox=document.querySelector('.SH');
+const tocoBox=document.querySelector('.TO');
+const videoEnd=document.querySelectorAll('.toggle');
+const videoend=document.querySelectorAll('.mb_content');
+const video=document.getElementsByTagName('video')[0];
+const video2=document.getElementsByTagName('video')[1];
+
+sooOhplay.addEventListener('click',()=>{
+    sooOhBox.style.display='block';
+    video.play();
+});
+tocoplay.addEventListener('click',()=>{
+    tocoBox.style.display='block';
+    video2.play();
+});
+
+for(let i=0; i<videoEnd.length; i++){
+    videoEnd[i].addEventListener('click',()=>{
+        if(sooOhBox.style.display=='block'){
+            sooOhBox.style.display='none';
+            video.pause();
+            video.load();
+        }
+        if(tocoBox.style.display=='block'){
+            tocoBox.style.display='none';
+            video2.pause();
+            video2.load();
+        }
+    });
+}
+for(let i=0; i<videoend.length; i++){
+    videoend[i].addEventListener('click',()=>{
+        if(sooOhBox.style.display=='block'){
+            sooOhBox.style.display='none';
+            video.pause();
+            video.load();
+        }
+        if(tocoBox.style.display=='block'){
+            tocoBox.style.display='none';
+            video2.pause();
+            video2.load();
+        }
+    });
+}
+
 const sction4=()=>{
     const ptfTo=ptf.offsetTop;
     let scrollTop=window.pageYOffset;
