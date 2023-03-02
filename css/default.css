@@ -1,24 +1,14 @@
-@import url('https://webfontworld.github.io/cookierun/CookieRun.css');
-
-body,header,nav,section,footer,figure,figcaption,ul,li,h1,h2,h3,div,p,span,em,button,address{
-	margin: 0px;
-	padding: 0px;
+html,body,div,section,h1,h2,h3,figure,figcaption,p,span,ul,li,strong,button{
+    margin: 0px;
+    padding: 0px;
 }
-ul{ list-style: none; }
-a{ text-decoration: none; }
-img{
-	display: block;
-	border: 0px;
-}
-hr{
-	display: none;
-}
+ul{list-style: none;}
+a{text-decoration: none;}
 body{
-	font-size: 14px;
-	font-family:"CookieRun",sans-serif;
-	-ms-overflow-style: none;
-    scrollbar-width: none;
+    font-family: 'Jua', sans-serif;
 }
-body::-webkit-scrollbar {
-    display: none;
+button {
+    font-family: 'Jua', sans-serif;
+    border: 0;
+    display: block;
 }
