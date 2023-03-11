@@ -395,7 +395,7 @@
         transform: rotate(0deg);
     }
 }
-#skill .skill_list .ai{
+#skill .skill_list .rd{
     right: 15%;
     transform: rotate(25deg);
     animation: ai 1.5s ease-in-out infinite alternate;
@@ -826,12 +826,9 @@
     color: #fff;
     cursor: pointer;
 }
-#portfolio .viex{
-    background: #808080;
-}
-#portfolio .github{
-    background: #8b00ff;
-}
+#portfolio .viex{background: #888;}
+#portfolio .github{background: #8b00ff;}
+.dc{ color: #888;}
 .dev{ color: #ff5f00;}
 .so{ color: #AF9690;}
 .tc{ color: #590902 ;}
