@@ -385,7 +385,7 @@
 #skill .skill_list .ps{
     left: 15%;
     transform: rotate(-25deg);
-    animation: ai 1.5s ease-in-out infinite alternate;
+    animation: ai 3s ease-in-out infinite alternate;
 }
 @keyframes ai{
     100%{
@@ -398,7 +398,7 @@
 #skill .skill_list .rd{
     right: 15%;
     transform: rotate(25deg);
-    animation: ai 1.5s ease-in-out infinite alternate;
+    animation: ai 3s ease-in-out infinite alternate;
 }
 @keyframes re{
     100%{
@@ -411,7 +411,7 @@
 #skill .skill_list .react{
     left: 10%;
     transform: rotate(-25deg);
-    animation: re 1.5s ease-in-out infinite alternate;
+    animation: re 3s ease-in-out infinite alternate;
 }
 @keyframes sa{
     100%{
@@ -423,7 +423,7 @@
     transform: translateX(-50%);
     top: -20px;
     left: 50%;
-    animation: sa 1.5s ease-in-out infinite alternate;
+    animation: sa 3s ease-in-out infinite alternate;
 }
 @keyframes fg{
     100%{
@@ -436,7 +436,7 @@
 #skill .skill_list .figma{
     transform: rotate(25deg);
     right: 10%;
-    animation: fg 1.5s ease-in-out infinite alternate;
+    animation: fg 3s ease-in-out infinite alternate;
 }
 @keyframes ht{
     100%{
@@ -449,7 +449,7 @@
 #skill .skill_list .html{
     transform: rotate(-45deg);
     left: 0px;
-    animation: ht 1.5s ease-in-out infinite alternate;
+    animation: ht 3s ease-in-out infinite alternate;
 }
 @keyframes cs{
     100%{
@@ -459,7 +459,7 @@
 }
 #skill .skill_list .css{
     left: 30%;
-    animation: cs 1.5s ease-in-out infinite alternate;
+    animation: cs 3s ease-in-out infinite alternate;
 }
 @keyframes js{
     100%{
@@ -469,7 +469,7 @@
 }
 #skill .skill_list .js{
     right: 30%;
-    animation: js 1.5s ease-in-out infinite alternate;
+    animation: js 3s ease-in-out infinite alternate;
 }
 @keyframes jq{
     100%{
@@ -482,7 +482,7 @@
 #skill .skill_list .jquery{
     right: 0px;
     transform: rotate(45deg);
-    animation: jq 1.5s ease-in-out infinite alternate;
+    animation: jq 3s ease-in-out infinite alternate;
 }
 #skill .pot_box{
     width: 80%;
@@ -778,6 +778,9 @@
     text-align: left;
     word-break: keep-all;
     white-space: initial;
+}
+#portfolio .txt_box>p{
+    color: #888;
 }
 #portfolio .txt_box p{
     font-size: 13px;
